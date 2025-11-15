@@ -1,0 +1,365 @@
+@media (max-width: 768px) {
+    .nav-container {
+      flex-direction: column;
+      gap: 16px;
+    }
+  
+    .nav-left,
+    .nav-right {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .main-container {
+      padding: 0 16px 200px;
+    }
+  
+    .track-item,
+    .podcast-card {
+      flex-direction: column;
+      text-align: center;
+      gap: 12px;
+      padding: 16px;
+    }
+  
+    .track-actions,
+    .podcast-actions {
+      justify-content: center;
+    }
+  
+    .podcast-cover {
+      width: 40px;
+      height: 40px;
+      font-size: 16px;
+      margin-right: 12px;
+    }
+  
+    .podcast-title {
+      font-size: 16px;
+    }
+  
+    .podcast-artist {
+      font-size: 13px;
+    }
+  
+    .podcast-description {
+      font-size: 11px;
+    }
+  
+    .player {
+      padding: 12px 20px;
+      width: 85%;
+      max-width: 500px;
+    }
+  
+    .player-progress {
+      gap: 10px;
+      margin: 12px 0;
+    }
+  
+    .current-time,
+    .duration {
+      font-size: 11px;
+      min-width: 35px;
+    }
+  
+    .progress-container {
+      height: 6px;
+    }
+  
+    .player-controls {
+      gap: 8px;
+    }
+  
+    .player-btn--play {
+      width: 45px;
+      height: 45px;
+      font-size: 16px;
+    }
+  
+    .player-btn--nav {
+      width: 38px;
+      height: 38px;
+      font-size: 14px;
+    }
+  
+    .player-btn--seek {
+      width: 35px;
+      height: 35px;
+      font-size: 12px;
+    }
+  
+    .auth-card {
+      padding: 40px;
+    }
+  
+    .auth-title {
+      font-size: 40px;
+    }
+  
+    .auth-form-title {
+      font-size: 28px;
+    }
+  
+    .auth-input {
+      padding: 28px 20px;
+      font-size: 22px;
+      height: 75px;
+    }
+  
+    .auth-submit-btn {
+      padding: 25px 24px;
+      font-size: 22px;
+      height: 75px;
+    }
+  
+    .auth-toggle-btn {
+      padding: 22px 24px;
+      font-size: 19px;
+      height: 65px;
+    }
+  
+    .tracks-page h2,
+    .favorites-page h2,
+    .podcasts-page h2 {
+      font-size: 32px;
+    }
+  
+    .profile-header {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+    }
+  
+    .profile-avatar {
+      width: 100px;
+      height: 100px;
+      font-size: 36px;
+      margin: 0 auto;
+    }
+  
+    .profile-info-container {
+      justify-content: center;
+    }
+  
+    .info-label {
+      font-size: 11px;
+    }
+  
+    .info-value {
+      font-size: 18px;
+    }
+  
+    .detail-page-container {
+      padding: 0 15px;
+    }
+  
+    .detail-page-header {
+      margin-bottom: 40px;
+    }
+  
+    .track-detail {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+      padding: 30px 20px;
+    }
+  
+    .track-cover-large {
+      width: 150px;
+      height: 150px;
+      font-size: 60px;
+    }
+  
+    .track-title-large {
+      font-size: 28px;
+    }
+  
+    .track-artist-large {
+      font-size: 20px;
+    }
+  
+    .track-info-large .track-actions {
+      justify-content: center;
+    }
+  
+    .info-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .track-page,
+    .podcast-page {
+      padding: 15px 0 180px;
+    }
+  
+    .track-additional-info {
+      margin-bottom: 130px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .main-container {
+      padding: 0 8px 180px;
+    }
+  
+    .auth-card {
+      padding: 32px;
+    }
+  
+    .auth-title {
+      font-size: 35px;
+    }
+  
+    .auth-form-title {
+      font-size: 25px;
+      margin-bottom: 32px;
+    }
+  
+    .auth-input {
+      padding: 25px 19px;
+      font-size: 21px;
+      height: 70px;
+    }
+  
+    .auth-submit-btn {
+      padding: 22px 24px;
+      font-size: 21px;
+      height: 70px;
+    }
+  
+    .auth-toggle-btn {
+      padding: 19px 24px;
+      font-size: 18px;
+      height: 60px;
+    }
+  
+    .podcast-actions {
+      flex-direction: column;
+      gap: 8px;
+    }
+  
+    .btn {
+      width: 100%;
+    }
+  
+    .player {
+      padding: 10px 12px;
+      bottom: 10px;
+      width: 90%;
+      max-width: 400px;
+    }
+  
+    .player-progress {
+      gap: 8px;
+      margin: 10px 0;
+    }
+  
+    .current-time,
+    .duration {
+      font-size: 10px;
+      min-width: 30px;
+    }
+  
+    .progress-container {
+      height: 5px;
+    }
+  
+    .progress-bar::after {
+      width: 14px;
+      height: 14px;
+    }
+  
+    .player-controls {
+      gap: 6px;
+    }
+  
+    .player-btn--play {
+      width: 42px;
+      height: 42px;
+      font-size: 15px;
+    }
+  
+    .player-btn--nav {
+      width: 35px;
+      height: 35px;
+      font-size: 13px;
+    }
+  
+    .player-btn--seek {
+      width: 32px;
+      height: 32px;
+      font-size: 11px;
+    }
+  
+    .podcast-card {
+      flex-direction: column;
+      text-align: center;
+      gap: 12px;
+    }
+  
+    .podcast-cover {
+      margin-right: 0;
+      margin-bottom: 8px;
+    }
+  
+    .podcast-info {
+      text-align: center;
+    }
+  
+    .profile-content {
+      padding: 30px 20px;
+    }
+  
+    .profile-avatar {
+      width: 80px;
+      height: 80px;
+      font-size: 30px;
+    }
+  
+    .info-label {
+      font-size: 10px;
+    }
+  
+    .info-value {
+      font-size: 16px;
+    }
+  
+    .detail-page-container {
+      padding: 0 10px;
+    }
+  
+    .detail-page-header {
+      margin-bottom: 30px;
+    }
+  
+    .track-cover-large {
+      width: 120px;
+      height: 120px;
+      font-size: 50px;
+    }
+  
+    .track-title-large {
+      font-size: 24px;
+    }
+  
+    .track-artist-large {
+      font-size: 18px;
+    }
+  
+    .track-meta {
+      justify-content: center;
+    }
+  
+    .track-detail {
+      padding: 20px 15px;
+    }
+  
+    .track-page,
+    .podcast-page {
+      padding: 10px 0 160px;
+    }
+  
+    .track-additional-info {
+      margin-bottom: 120px;
+    }
+  }

@@ -1,0 +1,182 @@
+.tracks-page,
+.favorites-page,
+.podcasts-page {
+  padding: 16px 0;
+
+  h2 {
+    color: $white;
+    text-align: center;
+    margin-bottom: 32px;
+    font-size: 40px;
+    font-weight: 700;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.tracks-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 32px 0;
+}
+
+.pagination-btn {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid $primary-color;
+  color: $primary-color;
+  padding: 12px 24px;
+  border-radius: $border-radius;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  transition: $transition;
+
+  &:hover:not(:disabled) {
+    background: $primary-color;
+    color: $white;
+    transform: translateY(-2px);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.page-info {
+  color: $white;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.detail-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.detail-page-header {
+  margin-bottom: 50px;
+}
+
+.track-page,
+.podcast-page {
+  min-height: 100vh;
+  padding: 20px 0 200px;
+}
+
+.track-detail {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 40px;
+  padding: 40px;
+  @include glass-effect;
+  border-radius: $border-radius-xl;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.track-cover-large {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, $primary-color, $secondary-color);
+  border-radius: $border-radius-xl;
+  @include flex-center;
+  font-size: 80px;
+  color: $white;
+  flex-shrink: 0;
+}
+
+.track-info-large {
+  flex: 1;
+}
+
+.track-title-large {
+  font-size: 36px;
+  font-weight: 700;
+  color: $text-dark;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.track-artist-large {
+  font-size: 24px;
+  color: $text-gray;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.track-meta {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.track-type,
+.track-duration,
+.track-genre {
+  background: rgba(102, 126, 234, 0.1);
+  color: $primary-color;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.track-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4a5568;
+  margin-top: 15px;
+}
+
+.track-info-large .track-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin: 20px 0;
+  justify-content: flex-start;
+}
+
+.track-additional-info {
+  @include glass-effect;
+  border-radius: $border-radius-xl;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 150px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 15px;
+  background: rgba(102, 126, 234, 0.05);
+  border-radius: $border-radius;
+}
+
+.info-item strong {
+  color: $text-gray;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.info-item span {
+  color: $text-dark;
+  font-size: 16px;
+  font-weight: 500;
+}
