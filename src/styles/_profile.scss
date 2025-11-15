@@ -1,0 +1,89 @@
+.profile-page {
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .profile-page-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+  }
+  
+  .profile-content {
+    @include glass-effect;
+    border-radius: $border-radius-xl;
+    padding: 40px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid rgba(102, 126, 234, 0.1);
+  }
+  
+  .profile-avatar-container {
+    flex-shrink: 0;
+  }
+  
+  .profile-avatar {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, $primary-color, $secondary-color);
+    border-radius: $border-radius-xl;
+    @include flex-center;
+    font-size: 42px;
+    font-weight: 700;
+    color: $white;
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+  }
+  
+  .profile-info-container {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .profile-info {
+    width: 100%;
+  }
+  
+  .info-row {
+    margin-bottom: 25px;
+  
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  .info-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: $text-gray;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+  }
+  
+  .info-value {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .profile-username {
+    color: $text-dark;
+  }
+  
+  .profile-email {
+    color: $text-dark;
+  }
+  
+  .profile-actions {
+    text-align: center;
+  }
