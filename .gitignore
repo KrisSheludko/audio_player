@@ -1,3 +1,6 @@
 # CSS files
 *.css
 *.css.map
+
+# Modules
+node_modules/
