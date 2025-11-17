@@ -1,6 +1,5 @@
 import { el } from 'redom';
 import { Input } from '../components/Input';
-import { Button } from '../components/Button';
 
 export class AuthPage {
   private element: HTMLElement;
@@ -50,13 +49,21 @@ export class AuthPage {
       el('h2.auth-form-title', this.isLoginMode ? 'Вход' : 'Регистрация'),
       el('.auth-input-group', ...formElements),
       el('.auth-actions',
-        new Button(
-          this.isLoginMode ? 'Войти' : 'Зарегистрироваться',
-          () => this.handleSubmit(),
-          'auth-submit-btn'
-        ).getElement(),
+        el('button.auth-submit-btn', {
+          type: 'button',
+          onclick: (e: Event) => {
+            e.preventDefault();
+            e.stopPropagation();
+            this.handleSubmit();
+          }
+        }, this.isLoginMode ? 'Войти' : 'Зарегистрироваться'),
         el('button.auth-toggle-btn', {
-          onclick: () => this.toggleMode()
+          type: 'button',
+          onclick: (e: Event) => {
+            e.preventDefault();
+            e.stopPropagation();
+            this.toggleMode();
+          }
         }, this.isLoginMode
           ? 'Нет аккаунта? Зарегистрироваться'
           : 'Уже есть аккаунт? Войти')

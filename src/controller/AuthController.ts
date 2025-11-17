@@ -17,44 +17,45 @@ export class AuthController {
   private async handleLogin(username: string, password: string): Promise<void> {
     try {
       if (!username || !password) {
+        alert('Заполните все поля');
         return;
       }
 
       const response = await apiService.login({ username, password });
 
       storageService.setToken(response.token);
-      if (response.user) {
-        storageService.setUser(response.user);
-      }
+      storageService.setUser(response.user);
 
       this.onAuthSuccess();
     } catch (error: any) {
+      alert(error.message);
     }
   }
 
   private async handleRegister(username: string, email: string, password: string): Promise<void> {
     try {
       if (!username || !email || !password) {
+        alert('Заполните все поля');
         return;
       }
 
       if (password.length < 6) {
+        alert('Пароль должен быть не менее 6 символов');
         return;
       }
 
-      const response = await apiService.register({ username, email, password });
-
-      if (response.user) {
-        storageService.setUser(response.user);
-      }
+      await apiService.register({ username, email, password });
 
       await this.handleLogin(username, password);
+
     } catch (error: any) {
+      alert(error.message);
     }
   }
 
   logout(): void {
     storageService.clear();
+    window.location.reload();
   }
 
   isAuthenticated(): boolean {

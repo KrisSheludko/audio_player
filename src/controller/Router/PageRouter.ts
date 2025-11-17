@@ -81,7 +81,6 @@ export class PageRouter {
   showAuthPage(mainContainer: HTMLElement): void {
     mainContainer.innerHTML = '';
     const authPage = this.authController.getAuthPage();
-    authPage.setLoginMode(true);
     mainContainer.appendChild(authPage.getElement());
   }
 
@@ -89,6 +88,7 @@ export class PageRouter {
     try {
       await apiService.addToFavorites(podcastId);
     } catch (error: any) {
+      console.error('Subscribe error:', error);
     }
   }
 
